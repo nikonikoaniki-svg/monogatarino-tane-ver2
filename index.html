@@ -29,12 +29,14 @@
         <p class="hint">ことばにふれると、意味が見られます。</p>
         <div id="seed-grid" class="seed-grid" aria-busy="true" aria-label="物語の種となる9つのことば"></div>
 
-        <section id="story-card" class="story-card" aria-labelledby="story-heading" hidden>
+        <section id="story-card" class="story-card is-empty" aria-labelledby="story-heading">
           <p id="story-heading" class="story-kicker">もうひとつの種</p>
-          <p id="story-title" class="story-title"></p>
-          <p id="story-pattern" class="story-pattern"></p>
+          <p id="story-title" class="story-title">『？』</p>
+          <p id="story-pattern" class="story-pattern">ボタンを押すと、ここに物語が現れます。</p>
           <p class="story-guide">主人公、場所、道具、目的、結末などを、<br class="mobile-break" />上のことばで自由に変えてみよう。</p>
         </section>
+
+        <p class="after-note">ひとつ選んでも、いくつか組み合わせてもかまいません。</p>
 
         <button id="make-button" class="make-button" type="button" disabled>
           <span class="button-mark" aria-hidden="true">✦</span>
@@ -45,8 +47,6 @@
           <button id="words-button" class="reroll-button" type="button">ことばだけ回す</button>
           <button id="story-button" class="reroll-button" type="button">物語だけ回す</button>
         </div>
-
-        <p class="after-note">ひとつ選んでも、いくつか組み合わせてもかまいません。</p>
         <p id="announcement" class="sr-only" aria-live="polite"></p>
         <p id="load-error" class="load-error" hidden>データを読み込めませんでした。words.jsonとstories.jsonがindex.htmlと同じ場所にあるか確認してください。</p>
       </section>

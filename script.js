@@ -193,7 +193,7 @@ async function spinWords() {
 }
 
 async function spinStory() {
-  storyCard.hidden = false;
+  storyCard.classList.remove("is-empty");
   storyCard.classList.add("is-choosing");
   storyPattern.textContent = "物語を選んでいます…";
   const next = chooseStory();
