@@ -20,7 +20,7 @@ button { font: inherit; }
 .seed-maker { width: min(100%, 520px); margin: 0 auto; text-align: center; }
 .title-block { position: relative; margin-bottom: 9px; }
 .eyebrow { margin: 0 0 3px; color: var(--accent); font-family: Georgia, "Times New Roman", serif; font-size: 9px; font-weight: 700; letter-spacing: .22em; }
-h1 { display: inline-block; margin: 0; font-family: "Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif; font-size: clamp(34px, 7vh, 50px); font-weight: 600; letter-spacing: .09em; line-height: 1; }
+h1 { display: inline-block; margin: 0; padding: .12em .05em .02em; font-family: "Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif; font-size: clamp(34px, 7vh, 50px); font-weight: 600; letter-spacing: .09em; line-height: 1.15; }
 .version { display: inline-block; margin-left: 5px; color: var(--accent); font-family: Georgia, serif; font-size: 12px; font-weight: 700; vertical-align: top; transform: translateY(4px); }
 .lead { margin: 5px 0 0; color: #716a5e; font-family: "Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif; font-size: 13px; letter-spacing: .04em; }
 .hint { margin: 0 0 5px; color: #756d60; font-size: 11px; }
@@ -37,20 +37,21 @@ h1 { display: inline-block; margin: 0; font-family: "Yu Mincho", "Hiragino Minch
 .reel-track.is-moving { animation: reel-roll linear both; }
 .reel-face { display: flex; width: 100%; height: 50%; min-width: 0; overflow: hidden; flex-direction: column; align-items: center; justify-content: center; background: var(--paper-light); }
 .word-line, .reading-line { display: flex; width: calc(100% - 14px); min-width: 0; align-items: center; justify-content: center; overflow: hidden; white-space: nowrap; }
-.word-line { height: 42%; align-items: flex-end; }
-.reading-line { height: 31%; align-items: flex-start; padding-top: 3px; }
+.word-line { height: 54%; align-items: center; padding-top: 5px; }
+.reading-line { height: 34%; align-items: flex-start; padding-top: 1px; }
 .word, .reading { display: inline-block; flex: 0 0 auto; max-width: none; transform-origin: center; white-space: nowrap; }
-.word { font-family: "Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif; font-weight: 600; letter-spacing: .02em; line-height: 1.1; }
+.word { font-family: "Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif; font-weight: 600; letter-spacing: .02em; line-height: 1.35; }
 .reading { color: #756d60; font-weight: 500; line-height: 1.2; }
 .is-spinning .reel-face { background: #fffaf0; }
 .is-spinning .word { color: #5a5349; }
 @keyframes reel-roll { from { transform: translate3d(0,0,0); } to { transform: translate3d(0,-50%,0); } }
 
-.story-card { position: relative; margin-top: 10px; border: 1px solid #5b756f; border-radius: 6px; background: rgba(255,253,248,.92); padding: 10px 18px 11px; box-shadow: 0 6px 16px rgba(49,92,85,.09); }
+.story-row { display: flex; align-items: stretch; gap: 10px; margin-top: 10px; }
+.story-card { position: relative; min-width: 0; flex: 1 1 auto; border: 1px solid #5b756f; border-radius: 6px; background: rgba(255,253,248,.92); padding: 10px 18px 11px; box-shadow: 0 6px 16px rgba(49,92,85,.09); }
 .story-card::before { content: ""; position: absolute; top: -1px; left: 50%; width: 64px; height: 3px; background: var(--story); transform: translateX(-50%); }
 .story-kicker { margin: 0 0 3px; color: var(--story); font-size: 10px; font-weight: 700; letter-spacing: .16em; }
 .story-title { margin: 0; font-family: "Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif; font-size: clamp(19px, 4vh, 26px); font-weight: 600; line-height: 1.25; }
-.story-pattern { max-width: 490px; margin: 5px auto 0; color: #504b42; font-size: 13px; line-height: 1.55; }
+.story-pattern { max-width: 490px; margin: 7px 0 0; color: #504b42; font-size: 15px; line-height: 1.65; text-align: left; }
 .story-guide { margin: 7px -3px -1px; border-top: 1px solid #d7d2c7; padding-top: 6px; color: var(--story); font-size: 12px; font-weight: 700; line-height: 1.5; }
 .story-card.is-empty .story-title, .story-card.is-empty .story-pattern { color: #8b857a; }
 .story-card.is-choosing .story-title { opacity: .55; }
@@ -61,8 +62,8 @@ h1 { display: inline-block; margin: 0; font-family: "Yu Mincho", "Hiragino Minch
 .make-button:focus-visible, .reroll-button:focus-visible { outline: 3px solid rgba(196,75,47,.28); outline-offset: 4px; }
 .make-button:disabled { background: #b76751; transform: translateY(3px); box-shadow: 0 4px 0 #87311f; }
 .button-mark { font-size: 19px; }
-.reroll-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
-.reroll-button { min-height: 42px; border: 1px solid #776f61; border-radius: 4px; background: #fffaf0; padding: 7px 12px; color: #3e3932; font-size: 14px; font-weight: 700; box-shadow: 0 3px 0 #b8ad99; cursor: pointer; transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease; }
+.reroll-buttons { display: flex; width: 116px; flex: 0 0 116px; flex-direction: column; gap: 8px; }
+.reroll-button { min-height: 0; flex: 1 1 0; border: 1px solid #776f61; border-radius: 4px; background: #fffaf0; padding: 7px 8px; color: #3e3932; font-size: 13px; font-weight: 700; line-height: 1.45; box-shadow: 0 3px 0 #b8ad99; cursor: pointer; transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease; }
 .reroll-button:hover:not(:disabled) { background: #fff4df; transform: translateY(-1px); box-shadow: 0 5px 0 #b8ad99; }
 .reroll-button:active:not(:disabled) { transform: translateY(3px); box-shadow: 0 1px 0 #b8ad99; }
 .reroll-button:disabled { cursor: default; opacity: .62; }
@@ -77,23 +78,25 @@ h1 { display: inline-block; margin: 0; font-family: "Yu Mincho", "Hiragino Minch
 @media (max-width: 500px) {
   .app-shell { padding: 10px 10px 16px; }
   .seed-cell { aspect-ratio: 1/.62; }
-  .story-card { margin-top: 8px; padding: 8px 11px 9px; }
-  .story-pattern { font-size: 12px; }
+  .story-row { gap: 7px; margin-top: 8px; }
+  .story-card { padding: 8px 11px 9px; }
+  .story-pattern { font-size: 13px; line-height: 1.55; }
   .story-guide { font-size: 11px; }
   .mobile-break { display: block; }
-  .reroll-buttons { gap: 7px; margin-top: 8px; }
-  .reroll-button { min-height: 39px; padding-inline: 7px; font-size: 13px; }
+  .reroll-buttons { width: 94px; flex-basis: 94px; gap: 6px; }
+  .reroll-button { padding-inline: 5px; font-size: 12px; }
   .after-note { display: none; }
 }
 
 @media (max-height: 720px) and (min-width: 501px) {
-  .app-shell { padding-top: 8px; padding-bottom: 10px; }
+  .app-shell { padding-top: 14px; padding-bottom: 10px; }
   .eyebrow { display: none; }
   .title-block { margin-bottom: 5px; }
-  h1 { font-size: 36px; }
+  h1 { font-size: 36px; line-height: 1.2; }
   .lead { margin-top: 2px; font-size: 12px; }
   .seed-cell { aspect-ratio: 1/.47; }
-  .story-card { margin-top: 7px; padding-top: 7px; padding-bottom: 8px; }
+  .story-row { margin-top: 7px; }
+  .story-card { padding-top: 7px; padding-bottom: 8px; }
   .story-pattern { margin-top: 3px; line-height: 1.4; }
   .story-guide { margin-top: 5px; padding-top: 5px; }
   .after-note { display: none; }

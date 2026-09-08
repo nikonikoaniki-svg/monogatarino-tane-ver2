@@ -68,7 +68,7 @@ function fitText(element, maxSize, minSize) {
 }
 
 function fitAllText(scope = document) {
-  scope.querySelectorAll(".word").forEach((el) => fitText(el, 34, 8));
+  scope.querySelectorAll(".word").forEach((el) => fitText(el, 31, 8));
   scope.querySelectorAll(".reading").forEach((el) => fitText(el, 16, 7));
 }
 
