@@ -52,7 +52,7 @@ h1 { display: inline-block; margin: 0; padding: .12em .05em .02em; font-family: 
 .story-kicker { margin: 0 0 3px; color: var(--story); font-size: 10px; font-weight: 700; letter-spacing: .16em; }
 .story-title { margin: 0; font-family: "Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif; font-size: clamp(19px, 4vh, 26px); font-weight: 600; line-height: 1.25; }
 .story-pattern { max-width: 490px; margin: 7px 0 0; color: #504b42; font-size: 15px; line-height: 1.65; text-align: left; }
-.story-guide { margin: 7px -3px -1px; border-top: 1px solid #d7d2c7; padding-top: 6px; color: var(--story); font-size: 12px; font-weight: 700; line-height: 1.5; }
+.story-guide { margin: 7px -3px -1px; border-top: 1px solid #d7d2c7; padding-top: 6px; color: var(--story); font-size: 12px; font-weight: 700; line-height: 1.5; text-align: left; }
 .story-card.is-empty .story-title, .story-card.is-empty .story-pattern { color: #8b857a; }
 .story-card.is-choosing .story-title { opacity: .55; }
 
