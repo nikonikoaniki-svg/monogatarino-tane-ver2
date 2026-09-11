@@ -1,8 +1,8 @@
-# 物語の種 ver2：GitHub Pages版
+# 物語の種 Ver.2：GitHub Pages版
 
 5,000語から選ばれる9つのことばと、104の有名な物語を組み合わせて、新しい物語のアイデアを考える創作支援アプリです。
 
-## ver2の内容
+## Ver.2の内容
 
 - 9分類・5,000語から9語を抽選
 - 104作品から「もうひとつの種」を抽選
@@ -26,6 +26,16 @@
 公開URLは通常、次の形になります。
 
 `https://ユーザー名.github.io/monogatarino-tane-ver2/`
+
+## noteのリンクカード用設定
+
+`index.html` にOGP設定を入れています。noteに公開URLを貼ると、`og-image-v2.jpg`（1200×630px）がリンクカード画像として読み込まれる設定です。
+
+- タイトル：`物語の種 Ver.2`
+- 公開URL：`https://nikonikoaniki-svg.github.io/monogatarino-tane-ver2/`
+- OGP画像：`https://nikonikoaniki-svg.github.io/monogatarino-tane-ver2/og-image-v2.jpg`
+
+※ note側に古いカード情報がキャッシュされている場合は、GitHub Pagesの更新反映後にURLを貼り直してください。
 
 ## ファイル構成
 
